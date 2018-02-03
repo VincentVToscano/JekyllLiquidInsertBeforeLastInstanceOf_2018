@@ -1,0 +1,147 @@
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒ Place global/project-level styles here
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+
+//  Apply hardware acceleration to every element
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+* {
+  @include translate3d(0);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include flex-container-display();
+  @include flex-container-flow(nowrap column);
+  height: 100vh; /* Avoid the IE 10-11 min-height issue. */
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.8);
+}
+
+body::-webkit-scrollbar-thumb {
+@include linearGradient(0, $color-teal-1, 50%, rgba(0, 0, 0, .4), 99%, $color-blue-1);
+  outline: 2px solid rgba(0,0,0,.8);
+}
+
+//  Define HTML headings – <h1> to <h6>
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 23px;
+}
+
+h5 {
+  font-size: 21px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+//  Define <em> (emphasized) & <strong> (important or strongly emphasized) tags
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+em {
+  font-style: italic;
+  color: white;
+  background: $color-blue-2;
+  padding: 0 3px 0 3px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+//  Global hyperlinks
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+a {
+  line-height: $global-hyperlinkButton-d-height;
+  padding: 2px 5px 2px 5px;
+  @include setPseudoClasses($color-teal-1, white, orange, white);
+  &:link {
+	padding: 2px 5px 2px 5px;
+  }
+}
+
+//  Text selection
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+::-moz-selection {
+  background-color: $color-teal-1;
+  color: #fff;
+}
+
+::selection {
+  background-color: $color-teal-1;
+  color: #fff;
+}
+
+//  Global footer
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+footer {
+  width: 100%;
+  height: $footer-height;
+  display: block;
+  background: $color-blue-1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: $footer-height;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+//  ratio --- Apply to <img> elements to scale proportionately
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.ratio {
+  display: block;
+  //visibility: hidden;
+  width: 100%;
+  height: auto;
+}
+
+//  globalMainContent --- Gets applied to <main> element
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.globalMainContent {
+  z-index: 1;
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: $global-nav-height 50px $footer-height 50px;
+  @include mobile{
+	padding-top: 20px;
+  }
+  @include tablet{
+	padding-top: 20px;
+  }
+}
+
+
+.endSign{
+  display: inline-block;
+  vertical-align: middle;
+  clear: both;
+  width: 9px;
+  height: 20px;
+  margin-left: 2px;
+}

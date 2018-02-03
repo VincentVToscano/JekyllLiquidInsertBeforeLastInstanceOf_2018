@@ -1,0 +1,23 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<main id="landing" class="globalMainContent">
+			<section>
+				<h1>Test Pages</h1>
+				<section>
+					<ul>
+						{% for item in site.os %}
+						<li><a href="{{ item.url | append:' ' | replace:'/ ','' }}">{{item.title}}</a></li>
+						{% endfor %}
+					</ul>
+				</section>
+			</section>
+		</main>
+	</body>
+</html>

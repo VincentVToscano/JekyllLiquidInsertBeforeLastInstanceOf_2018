@@ -1,0 +1,140 @@
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒ Article style 1
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+
+//  articleStyle01 --- is applied to <main> and designates articleStyle01 template styles
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.articleStyle01{
+
+  article{
+	width: 50%;
+	height: auto;
+	overflow: hidden;
+	background: transparent;
+	float: left;
+	
+	@include mobile {
+	  width: 100% !important;
+	  float: none;
+	}
+
+	@include tablet {
+	  width: 100% !important;
+	  float: none;
+	}
+
+	header {
+	  display: block;
+	  position: relative;
+	  width: 100%;
+	  background: $color-bkgd;
+	  padding: 0;
+
+	  .hero{
+
+	  }
+
+	  .author{
+		font-size: 15px;
+		font-weight: 700;
+	  }
+
+	  .articlePubUp{
+		display: inline-block;
+		float: left;
+		width: 50%;
+		height: $social-width-mobile;
+		//background: $color-blue-1;
+		&.col2{
+		  //background: $color-gray-1;
+		  clear: right;
+		}
+
+		@include mobile {
+		  width: 100% !important;
+		  float: none;
+		}
+
+		@include tablet {
+		  width: 100% !important;
+		  float: none;
+		}
+	  }
+	  // Published & Updated
+	  .pubUp{
+		font-size: 13px;
+		font-weight: 500;
+	  }
+	}
+
+	section {
+
+	  &.copyDeck {
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		background: transparent;
+		margin: 5px 0 0 0;
+		.col {
+		  position: relative;
+		  left: 0;
+		  top: 0;
+		  overflow: hidden;
+		}
+
+		p{
+		  margin-bottom: 5px;
+		}
+
+	  }
+	}
+
+  }
+
+
+  h1{
+	font-family: 'LcdD';
+	font-size: 52px;
+	line-height: 54px;
+	color: $color-blue-1;
+	@include mobile {
+	  font-size: 45px;
+	  line-height: 45px;
+	}
+	@include tablet {
+	  font-size: 45px;
+	  line-height: 45px;
+	}
+  }
+
+  h2{
+	font-size: 22px;
+	font-weight: 900;
+	@include mobile {
+	  font-size: 18px;
+	}
+	@include tablet {
+	  font-size: 18px;
+	}
+  }
+  h3 {
+	font-size: 21px;
+	font-weight: 400;
+  }
+
+
+  ul li {
+	border-bottom: 1px dotted #ccc;
+	padding: 2px 0 3px;
+  }
+
+  h3, h4, h5, h6 {
+	margin-top: 20px;
+  }
+
+}
+

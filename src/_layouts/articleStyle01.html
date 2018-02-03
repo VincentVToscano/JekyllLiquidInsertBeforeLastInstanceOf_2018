@@ -1,0 +1,25 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>{% include head.html %}
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<main class="globalMainContent articleStyle01">
+	<article>
+		<header>
+			<h1>{{ page.headline }}</h1>
+			<h2>{{ page.subheadline }}</h2>
+
+		</header>
+		<section class="copyDeck">
+			<div class="col col1">
+				{{ page.content }}<img class="endSign" src="{{site.data.images.endSign_diamond}}" alt="">
+			</div>
+		</section>
+	</article>
+</main>
+</body>
+</html>

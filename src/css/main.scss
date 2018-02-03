@@ -1,0 +1,13 @@
+---
+---
+//  Common, global and tags.
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+@import '../_scssPartials/common/reset';
+@import '../_scssPartials/common/fonts';
+@import '../_scssPartials/common/global_vars';
+@import '../_scssPartials/common/mixins';
+@import '../_scssPartials/common/global';
+
+//  Project-specific CSS/SCSS goes below here
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+@import '../_scssPartials/views/articleStyle01';

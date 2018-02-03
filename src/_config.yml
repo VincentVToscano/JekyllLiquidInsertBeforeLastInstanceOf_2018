@@ -1,0 +1,145 @@
+source:           .
+destination:      ../build
+plugins_dir:      _plugins
+layouts_dir:      _layouts
+data_dir:         _data
+includes_dir:     _layoutPartials
+collections_dir:  _collections
+collections:
+  os:
+    output: true
+    permalink: /os/:path/
+
+
+sass:
+    sass_dir: _scssPartials
+    style: compressed
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Locations [end]
+
+# ▒ Handling & Reading [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+safe:         false
+include:      [".htaccess"]
+exclude:      ["README.md","node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/","Gem*"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Handling & Reading [end]
+
+# ▒ Filtering Content [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Filtering Content [end]
+
+# ▒ Plugins [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+whitelist: []
+
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Plugins [end]
+
+# ▒ Conversion [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Conversion [end]
+
+# ▒ Serving [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Serving [end]
+
+# ▒ Outputting [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+#permalink:     date
+paginate_path: /page:num
+timezone: America/Los_Angeles
+quiet:    false
+verbose:  true
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Outputting [end]
+
+# ▒ Global/Site-level Variables [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+url: &default_url http://insertbeforelastinstanceof.net
+name: &default_name Insert Before Last Instance of Pattern
+title: &default_title Insert Before Last Instance of Pattern Generic Title
+meta:
+  title: *default_title
+  description: &default_description This repo and associated files are used to further a new Jekyll/Liquid::Template plugin.
+  keywords: &default_keywords lots, of, words, could, go, here, enjoy
+  author: &default_author Vincent V. Toscano
+  editor: &default_editor Vincent V. Toscano
+  publisher: *default_name
+  theme_color: &default_theme_color "#00b29a"
+  baseURL: &default_baseURL http://insertbeforelastinstanceof.net
+  app_name: &default_app_name Global Application Name # Should not be adjusted per page - Windows 7: "[D]efines the name of the Pinned site application instance.
+  robots: noindex,nofollow # noindex,nofollow or index,follow
+  iconURL: &default_iconURL /assets/imgs/global/ # pinned sites customizations
+  configURL: *default_iconURL # pinned sites customizations (such as tile background, badge updates and notifications)
+
+
+# ▒ Page-level Variables [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      theme-color: ff3310
+  -
+    scope:
+      path: ""
+      type: "os"
+    values:
+      layout: "articleStyle01"
+
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Page-level Variables [end]
+
+# ▒ Templating [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+liquid:
+  error_mode: warn
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Templating [end]
+
+# ▒ Markdown Processors [begin]
+# ▒ Kramdown CLI full set of options: https://kramdown.gettalong.org/options.html
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  # Disable auto-generated ID's for headings
+  auto_ids:       false
+  footnote_nr:    1
+  # Use numeric to convert things like smart quotes to HTML entities, or else use as_char with a <meta charset="UTF-8">
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+#  parse_block_html: true
+#  coderay_css:    class
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Markdown Processors [end]
