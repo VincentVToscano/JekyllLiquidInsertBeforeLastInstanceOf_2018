@@ -1,12 +1,12 @@
 module Jekyll
   module InsertBeforeLastFilter
     # Inserts another string before the last occurrences of a string
-    def insert_before_last(input, string, insertion = ''.freeze)
-      # find last index of the search string
-      last_index = input.rindex(string)
-      # dissect, concat and return new string (the fastest of all benchmarks)
-      output = "#{input[0...last_index]}#{insertion}#{input[last_index...-1]}" if last_index
-      # fallback to input as-is if nothing found
+    def insert_before_last(input, search_string, insertion_string = ''.freeze)
+      # Find last index of the search search_string
+      last_index = input.rindex(search_string)
+      # Dissect, concatenate, and return a new string (fastest method of all benchmarks)
+      output = "#{input[0...last_index]}#{insertion_string}#{input[last_index...-1]}" if last_index
+      # Fallback to input/original string if nothing is found
       output || input
     end
   end
