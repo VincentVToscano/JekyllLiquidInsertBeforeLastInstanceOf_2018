@@ -17,10 +17,10 @@
 		<section class="copyDeck">
 			<div class="col col1">
 				{% capture endSign %}
-				<img class="endSign" src="{{site.data.images.endSign_diamond}}" alt=""></p>
+				<img class="endSign" src="{{site.data.images.endSign_diamond}}" alt="">
 				{% endcapture %}
 
-				{{ page.content | replace_last_instance_of: '</p>', endSign }}
+				{{ page.content | insert_before_last: '</p>', endSign }}
 
 			</div>
 		</section>
