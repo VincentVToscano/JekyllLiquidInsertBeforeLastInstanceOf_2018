@@ -16,7 +16,12 @@
 		</header>
 		<section class="copyDeck">
 			<div class="col col1">
-				{{ page.content }}<img class="endSign" src="{{site.data.images.endSign_diamond}}" alt="">
+				{% capture endSign %}
+				<img class="endSign" src="{{site.data.images.endSign_diamond}}" alt=""></p>
+				{% endcapture %}
+
+				{{ page.content | replace_last_instance_of: '</p>', endSign }}
+
 			</div>
 		</section>
 	</article>
